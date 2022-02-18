@@ -10,6 +10,6 @@ feb2007<-cons[month(as.Date(cons$Date,format="%d/%m/%Y"))==2&year(as.Date(cons$D
 firsttwodays<-feb2007[day(as.Date(feb2007$Date,format="%d/%m/%Y"))==1|day(as.Date(feb2007$Date,format="%d/%m/%Y"))==2,]
 #tricky to do histogram with factors
 h<-hist(as.numeric(levels(firsttwodays$Global_active_power))[firsttwodays$Global_active_power],col = "red",main = "Global Active Power",xlab = "Global Active Power (kilowatts)")
-png(filename = "plot1.png")
+png(filename = "plot1.pdf")
 hist(as.numeric(levels(firsttwodays$Global_active_power))[firsttwodays$Global_active_power],col = "red",main = "Global Active Power",xlab = "Global Active Power (kilowatts)")
 dev.off()

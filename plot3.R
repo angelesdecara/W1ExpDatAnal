@@ -12,7 +12,7 @@ firsttwodays<-feb2007[day(as.Date(feb2007$Date,format="%d/%m/%Y"))==1|day(as.Dat
 #Now global active power versus time during those two days
 
 submet=cbind(as_datetime(paste(firsttwodays$Date,firsttwodays$Time),format = "%d/%m/%Y %H:%M:%S"),levels(firsttwodays$Sub_metering_1)[firsttwodays$Sub_metering_1],levels(firsttwodays$Sub_metering_2)[firsttwodays$Sub_metering_2],firsttwodays$Sub_metering_3)
-png(file="plot3.png")
+png(filename ="plot3.png")
 plot(submet[,1],submet[,2],t="l",xaxt="n",xlab = "",ylab = "Energy sub metering")
 lines(submet[,1],submet[,3],t="l",col="red")
 lines(submet[,1],submet[,4],t="l",col="blue")

@@ -15,7 +15,7 @@ submet=cbind(as_datetime(paste(firsttwodays$Date,firsttwodays$Time),format = "%d
 gpa=cbind(submet,levels(firsttwodays$Global_active_power)[firsttwodays$Global_active_power],levels(firsttwodays$Global_reactive_power)[firsttwodays$Global_reactive_power])
 voltage=cbind(gpa,levels(firsttwodays$Voltage)[firsttwodays$Voltage])
 
-png(file = "plot4.png")
+png(filename  = "plot4.png")
 #voltage is time, submets 1, 2,3, global activate power, global reactivate, voltage
 par(mfrow=c(2,2))
 plot(voltage[,1],voltage[,5],t="l",ylab = "Global Active Power",xaxt="n",xlab = "")
